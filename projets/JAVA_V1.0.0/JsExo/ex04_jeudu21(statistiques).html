@@ -1,0 +1,55 @@
+﻿<html>
+	<head>
+		<title>Exo04_Jeu du 21 (statistiques)</title>
+	</head>
+	<body>
+		<!--5-Jeu du 21 (statistiques)-->
+		<div align="center">
+			<h1>Jeu du 21 (statistiques)</h1>
+			<hr>
+			<br>Deux joueurs lancent un dé l'un après l'autre. Les points obtenus s'ajoutent, le premier qui atteint <br> ou dépasse 21 a gagné.
+			<br><br><b> Qui a le pus de chances de gagner?</b>
+			<br><br>Le joueur 1 qui commence à lancer ou le joueur 2 ?
+			<br><br>Pour nous faire une opinion, simulons 1000 parties et observons les résultats.
+			<br>
+			
+	<script language="JavaScript">
+			//Variables
+				var total1=0;
+				var total2=0;
+			
+			function stat(){		
+				var total=0;
+				var joueur=1;
+				var lancer=0;
+
+				while (total<21){// Tant que le total est inférieur à 21
+					lancer=1+Math.floor(Math.random()*6); // Lancer de dé au hasard
+					total+=lancer; // Le lancer + le total jusqu'a que ce soit superieur a 21
+					joueur=3-joueur;
+					}	
+			
+					joueur=3-joueur; 
+					if (joueur==1)
+							total1++;
+							else
+							total2++;
+				}
+		
+		for(var i=0; i<1000; i++) stat();
+		
+		document.write("Victoires du joueur 1 :"+total1+"<br>");
+		document.write("Victoires du joueur 2 :"+total2);
+		
+
+		
+		</script>
+			</table>	
+			<br>
+			<hr>
+			<br>
+			<a href="ex04_jeudu21(statistiques).html">Recommencer</a>
+					
+		</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head><title>01 Exos-Conversion</title></head>
+<body>
+
+	<div align="center">
+	<h1><b>Conversion Euro-Franc</b></h1>
+	<br><hr><br>
+	<script language="JavaScript">
+	function conversion() {
+	//lire la valeur euro
+	var eu=eval(document.formu.euro.value);
+	//conversion et arrondi
+	var fr=eu*6.55957;
+	fr=Math.round(fr*100)/100;
+	//affichage du résultat
+	document.formu.franc.value=String(fr);
+	}
+	</script>
+	<form name="formu">
+		<table>
+			<tr>
+				<td>
+					Valeur en Euros :
+				</td>
+				<td>
+					<input name="euro" type="text" SIZE="10">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Valeur en Francs :
+				</td>
+				<td>
+					<input name="franc" type="text" SIZE="10">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><DIV align="center">
+					<input type="button" value="Convertir" onclick="conversion()">
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>

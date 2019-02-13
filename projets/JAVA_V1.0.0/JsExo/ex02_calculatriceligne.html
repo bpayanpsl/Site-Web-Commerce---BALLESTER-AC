@@ -1,0 +1,27 @@
+<html>
+<head><title>Exo02_Calculette en ligne</title></head>
+<body> 
+<!--4-Calculette en ligne-->
+<div align="center">
+<h1><b>Calculette en ligne</b></h1><br>
+<br>
+<hr>
+Entrez votre calcul et cliquez sur le bouton "=".
+<script language="Javascript">
+		function calculette()
+		{
+		var calcul=eval(document.formu.calcul.value);
+		document.formu.res.value=(calcul);
+		}
+		
+	</script>
+		
+	<form name="formu">
+		<br>
+		<input type="text" name="calcul" />
+		<input type="button" name="envoi" onclick="calculette()" value="="/>
+		<input type="text" name="res" />
+
+	</form>
+</body>
+</html>

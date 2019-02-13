@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Exo05_Ecire la date</title>
+	</head>
+	<body>
+		<!--1-Ecire la date-->
+		<div align="center">
+			<br>
+			
+	<script language="JavaScript">
+		var jours=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+		var month=["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre"];
+		function date(){
+			var maintenant=new Date();
+			var jour=maintenant.getDate();
+			var mois=maintenant.getMonth();
+			var an=maintenant.getFullYear();
+			var day=maintenant.getDay();
+			document.write("Nous sommes le "+jours[day]+" "+jour+" "+month[mois]+" "+an+".");
+			}
+			date();
+		</script>		
+		</div>
+	</body>
+</html>

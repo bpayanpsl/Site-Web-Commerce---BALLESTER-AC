@@ -1,0 +1,20 @@
+<html>
+<head><title>Exo01_Date et heure</title></head>
+<body>
+<!--2-Date et Heure-->
+<div align="center">
+<script language="JavaScript">
+		document.write("<h1><b>Date et Heure</b></h1>","<br>");
+		var maintenant=new Date();
+		var jour=maintenant.getDate();
+		var mois=maintenant.getMonth()+1;
+		var an=maintenant.getFullYear();
+		var heure=maintenant.getHours();
+		var min=maintenant.getMinutes();
+		var sec=maintenant.getSeconds(); 
+		document.write("<br><hr><br>","Nous sommes le ",jour,"/",mois,"/",an,".");
+		document.write("<br>","Il est ",heure,"h ",min,"mn ",sec,"s ");
+	</script>
+</div>
+</body>
+</html>

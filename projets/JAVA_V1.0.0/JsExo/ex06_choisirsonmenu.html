@@ -1,0 +1,97 @@
+﻿<html>
+	<head>
+		<title>Exo06_Choisir son menu</title>
+	</head>
+	<body>
+		<!--3-Choisir son menu-->
+		<div align="center">
+		<h1><b>Composez votre menu</b></h1>
+ <script language="JavaScript">
+		// Déclaration des variable prix et texte
+		var prix=0;
+		var texte="";
+
+		
+		function nom(choix) {
+			if (choix.name=="entree")  // si le choix a pour nom entree retourner Entrée
+				return "Entrée";
+				else 
+					if (choix.name=="plat") // Si le choix a pour nom plat retourner Plat
+						return "Plat";
+						else 
+							return "Dessert";   // Sinon retourner Dessert
+		}
+		
+		// fonction ajoute le choix du menu
+		function ajoute(choix) {
+			var Y=choix.selectedIndex; // Selectionne le choix du plat de l'entree et du essert choisi et le met dans la variable Y
+			var prx=choix[Y].value; // Prendre la valeur du choix, donc le prix est le mettre dans la variable prx
+			prix+=eval(prx); // Transformer en entier et l'ajouter au prix
+			var S=nom(choix); // Appeler la fonction nom avec le choix en parametre et le mettre dans la variable S
+				while (S.length < 15) // Autant d'espaces
+					S+=" ";
+					S=S+": "+prx; // Puis mettre le prix
+					texte=texte+S+"\n"; // Mettre le texte "Prix a payer" les espaces et le prix.  
+		}
+
+		function resultat() {
+			texte="Prix à payer : \n";
+			prix=0;
+			ajoute(document.formu.entree);
+			ajoute(document.formu.plat);
+			ajoute(document.formu.dessert);
+			var S="Total";
+				while (S.length < 15) // Tant que la longueur de S est inférieur a 15 faire
+					S+=" "; // Mettre autant d'espace que de longueur
+					texte=texte+S+": "+prix; // Prix à payer + les espaces : et le prix final
+					document.formu.commande.value=texte; // Puis l'inserer das la commande
+		 }
+
+ </script>
+
+<p>Choisissez une entrée, un plat et un dessert, puis appuyez sur le bouton "Envoi".</p>
+	<form name="formu">
+		<table align="center">
+			<tr>
+				<td>
+				<b>Entrée</b><br>
+					<select name="entree">
+						<option value="4.50">Crudités</option>
+						<option value="5.55">Pâté en croute</option>
+						<option value="3.50">Oeufs Mayo</option>
+						<option value="4.75" selected>Avocats</option>
+					</select>
+				</td>
+				<td>
+				<b>Plat principal</b><br>
+					<select name="plat">
+						<option value="8.00">Steak-Frites</option>
+						<option value="12.00">Choucroute</option>
+						<option value="11.57">Cassoulet</option>
+						<option value="13.55" selected>Couscous</option>
+					</select>
+				</td>
+				<td>
+				<b>Dessert</b><br>
+					<select name="dessert">
+						  <option value="3.58">Yaourt</option>
+						  <option value="5.25">Fruits</option>
+						  <option value="4.25" selected>Glace</option>
+						  <option value="4.45">Tartelette</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center">
+					<input type="button" value=" Envoi " onclick="resultat()">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center">
+					<textarea rows="8" cols="60" name="commande"></textarea>	
+				</td>
+			</tr>
+		</table>
+	</form> 
+</body>
+</html>

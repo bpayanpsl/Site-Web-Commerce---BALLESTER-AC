@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Acme', sans-serif;
+}
+
+#haut{
+	width : auto;
+	height : 10%;
+	text-align : center;
+	border-style : solid;
+	border-width : 1px;
+	background-image : url("noir02.jpg");
+	background-size : cover;
+	position: relative;
+	bottom: 0; left: 0; right: 0;
+}	
+
+#haut td {
+		color : white;
+}
+
+#connectBar{
+	text-align : right;
+	width : auto;
+	height : 3%;
+	border-style : solid;
+	border-width : 1px;
+	position: relative;
+	bottom: 0; left: 0; right: 0
+}
+
+#connectBar a {
+	font-family: 'Acme', sans-serif;
+}
+
+#menu{
+	width : auto;
+	height : 3%;
+	border-style : solid;
+	border-width : 1px;
+	position: relative;
+	bottom: 0; left: 0; right: 0
+}
+
+#menu table {
+	text-align : center;
+	width : 100%;
+}
+
+#menu td {
+	width : auto;
+}
+
+#corps {
+	height : 80%;
+	width : auto;
+	border-style : solid;
+	border-width : 1px;
+}
+
+#corps a {
+	font-family: 'Acme', sans-serif;
+}
+
+#bas {
+	height : 10%;
+	width : auto;
+	border-style : solid;
+	border-width : 1px;
+	background-image : url("noir02.jpg");
+	background-size : cover;
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	right: 0;
+}
+
+#formInscription {
+	margin-left : 30%;
+	margin-right : 30%;
+	margin-top : auto;
+	margin-bottom : auto;
+}
+
+#formConnexion {
+	margin-left : 30%;
+	margin-right : 30%;
+}
+
+#tabProd table {
+	border-style : solid;
+	border-width : 1px; 
+	text-align : center;
+}
+
+#menuProd img {
+	width : 100px;
+	height : 100px;
+}
+
+#menuProd table {
+	text-align : center;
+	width : 100%;
+}
+
+#tabRadiateur table {
+	text-align : center;
+	width : 100%;
+}
+
+#tabRadiateur img {
+	width : 100px;
+	height : 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #a00;
+}
+a:visited {
+  color: #844;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: white;
+  background: #800;
+  border-radius:300px / 200px;
+}
+
+#haut img {
+	width : 60;
+	height : 60;
+}
+
+#contact fieldset {
+	margin-left: 35%;
+    margin-right: 35%;
+}
+
+#panier fieldset {
+	margin-left: 38%;
+    margin-right: 38%;
+}
+
+	

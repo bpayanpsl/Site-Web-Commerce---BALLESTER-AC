@@ -1,0 +1,60 @@
+/* 
+    Document   : gsb
+    Created on : septembre 2014, 20:55:26
+    Author     : B.L.
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    text-align: justify;
+}
+
+footer a,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+    color: #bfbfbf;
+}
+
+footer a:hover {
+    color: #20b2aa;
+}
+
+footer ul,
+footer p {
+    font-size: 0.75em;
+}
+
+.header,
+#fondNav,
+footer {
+    width: 100%;
+}
+
+footer {
+    color: #fff;
+}
+
+#contenu {
+    min-height: 500px;
+}
+
+#fondNav,
+footer {
+
+    background-color: #111;
+}
+
+.header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: url('../images/fondHeader.png');
+}
+
+.header h2 {
+    color: #fff;
+}

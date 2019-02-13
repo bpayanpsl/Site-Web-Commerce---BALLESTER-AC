@@ -1,0 +1,32 @@
+<html>
+<head><title>Exo04_Somme des premiers entiers</title></head>
+<body>
+<!--3-Somme des premiers entiers-->
+<div align="center">
+<h1>Somme des premiers entiers</h1>
+<hr>
+<br>
+<script language="Javascript">
+	
+	function entier ()
+	{
+		var n=document.formu.valeur.value;
+		var resultat=0;
+		for (i=1; i<=n; i++)
+		{
+			resultat=resultat+i;
+		}
+		document.formu.resultat.value=resultat;
+	}
+	
+</script>
+		<form name="formu">
+			Valeur de n : <input type="text" name="valeur"/>
+			<br>
+			<input type="button" value="Calculer" onclick="entier()"/>
+			<br>
+			1+2+...+n = <input type="text" name="resultat"/>
+		<br>
+</div>
+</body>
+</html>

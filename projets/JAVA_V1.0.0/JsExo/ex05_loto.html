@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Exo05_Loto</title>
+	</head>
+	<body>
+		<!--4-Loto-->
+		<div align="center">
+		<h1><b>Loto</b></h1>
+		<br>
+		<hr>
+		<br>
+		<h3>
+	<script language="JavaScript">
+			
+		var T=new Array(6);
+		for (var i=0; i<6; i++) {
+			do{
+				T[i]=1+Math.floor(Math.random()*49);
+				var test=true;
+				for (var j=0; j<i; j++) 
+					if (T[j]==T[i]) 
+					test=false;
+					if (test) 
+					document.write(" "+T[i]+" ");
+			} while (!test)
+		}
+		</script>	
+			</h3>
+			<br>
+			<hr>
+			<br>
+			<a href="ex05_loto.html">Autre tirage...</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<html>
+<head><title>Exo04_Jeu du 21</title></head>
+<body>
+<!--4-Jeu du 21-->
+<div align="center">
+	<h1>Jeu du 21</h1>
+	<hr>
+	<br> Deux joueurs lancent un dé l'un après l'autre. Les points obtenus s'ajoutent, le premier qui atteint<br> ou dépasse 21 a gagné.
+
+	<br>
+	<br>Voici une partie :
+	<br>
+<script language="JavaScript">
+	// Création du tableau
+	document.writeln("<table align=\"center\"cellpadding=\"4\" cellspacing=\"0\" border=\"1\">");
+	document.writeln("<tr><td><b>Joueur 1</b></td><td><b>Joueur 2</b></td><td><b>Total</b></td></tr>");
+	//Variables
+	var total=0;
+	var joueur=1;
+	var lancer=0;
+		while (total<21){// Tant que le total est inférieur à 21
+			lancer=Math.floor(Math.random()*6); // Lancer de dé au hasard
+			total+=lancer; // Le lancer + le total jusqu'a que ce soit superieur a 21
+			document.writeln("<tr><td>");// On ouvre une nouvelle ligne
+			
+			if (joueur==1)
+				document.writeln(lancer+"</td><td><br></td>");// On rempli la case du dé du joueur et mettons vide l'autre
+				else
+				document.writeln("<br></td><td>"+lancer+"</td>"); // Si le joueur n'est pas egal à 1 alors afficher pareil dans le joueur 2
+				document.writeln("<td>"+total+"</td></tr>"); // Et afficher le total
+				joueur=3-joueur; // Puis comme nous sommes dans le joueur 2 déduire le joueur 2 de 3 pour laisser le lancé au joueur 1
+				
+			
+		} 
+		
+</script>
+
+<script language="JavaScript">
+joueur=3-joueur;
+alert ("Le joueur "+joueur+" a gagné !");
+</script>
+	</table>	
+	<a href="ex04_jeudu21.html">Autre partie</a>
+			
+</div>
+</body>
+</html>

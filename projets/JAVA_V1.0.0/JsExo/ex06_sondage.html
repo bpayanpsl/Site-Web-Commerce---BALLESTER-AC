@@ -1,0 +1,115 @@
+﻿<html>
+	<head>
+		<title>Exo06_Sondage informatique</title>
+	</head>
+	<body>
+		<!--3-Sondage informatique-->
+		<div align="center">
+		<h1><b>Sondage informatique</b></h1>
+		<br>
+		<hr>
+		<br>
+<script language="javascript">
+		function resultat(){
+			// Mettre le sondage dans la variable sondage
+			var sondage=document.sondage;
+			
+			// Le sexe
+			var S="Sexe : ";
+			for (var i=0; i < 2; i++) 
+				if (sondage.Sexe[i].checked) // sexe 1 ou 2 est selectionner
+				S=S+sondage.Sexe[i].value;// rajouter la valeur au sexe :
+			// L'age	
+			S=S+"\nAge : ";
+			S=S+sondage.Age.options[sondage.age.selectedIndex].text;
+			
+			// Systeme d'exploitation utilisé
+			S=S+"\nSystème d'exploitation : ";
+			for (var i=0; i < 4; i++) 
+				if (sondage.Syst[i].checked) 
+					S=S+sondage.Syst[i].value;
+			
+			// Navigateur
+			S=S+"\nNavigateur : ";
+			S=S+sondage.Navig.options[sondage.Navig.selectedIndex].text;
+			
+			// Langages de programation
+			S=S+"\nLangages :";
+			for (var i=0; i < 2; i++) 
+				if (sondage.Basic.checked) 
+					S=S+" Basic ";
+				if (sondage.Pascal.checked) 
+					S=S+" Pascal ";
+				if (sondage.Cplus.checked) 
+					S=S+" C++ ";
+				if (sondage.Java.checked) 
+					S=S+" Java ";
+				if (sondage.JavaScript.checked) 
+					S=S+" JavaScript ";
+			// Niveau en html
+			S=S+"\nNiveau HTML : ";
+			S=S+sondage.Niveau.selectedIndex; 
+				
+			// Envoi du sondage
+			if (confirm(S))
+				sondage.action="mailto:camille.lapprand@hotmail.fr?subject=Sondage";
+	}
+	
+</script>
+<br>
+		<p><i>Merci de bien vouloir remplir et envoyer le questionnaire suivant.</i></p>
+			<form name="sondage" method="post" enctype="type/plain">
+				<b>Sexe : </b>
+					<input type="radio" name="sexe" value="Masculin" checked> Masculin</input>
+					<input type="radio" name="sexe" value="Féminin"> Féminin</input>
+				<br>
+				<b>Tranche d'âges : </b>
+					<select name="Age">
+						<option selected>moins de 15 ans
+						<option>de 15 à 20 ans
+						<option>de 20 à 30 ans
+						<option>de 30 à 40 ans
+						<option>de 40 à 50 ans
+						<option>de 50 à 60 ans
+						<option>plus de 60 ans
+					</select>
+				<br>
+				<b>Système d'exploitation utilisé : </b><br>
+					<input type="radio" name="Syst" value="Linux" checked> Linux</input>
+					<input type="radio" name="Syst" value="Mac"> MAC-OS</input>
+					<input type="radio" name="Syst" value="Windows"> Windows</input>
+					<input type="radio" name="Syst" value="Autre"> Autre</input>
+				<br>
+				<b>Navigateur utilisé : </b>
+					<select name="Navig">
+						<option selected>Netscape Communicator
+						<option>Internet Explorer
+						<option>Opéra
+						<option>Autre
+					</select>
+				<br>
+				<b>Langages de programmation connus : </b><br>
+					<input type="checkbox" name="Basic"> Basic</input>
+					<input type="checkbox" name="Pascal"> Pascal</input>
+					<input type="checkbox" name="Cplus"> C/C++</input>
+					<input type="checkbox" name="Java"> Java</input>
+					<input type="checkbox" name="JavaScript"> JavaScript</input>
+				<br>
+				<b>Votre niveau en html : </b>(de 0 pour nul à 5 pour expert)
+					<select name="Niveau">
+						<option selected> 0
+						<option> 1
+						<option> 2
+						<option> 3
+						<option> 4
+						<option> 5
+					</select>
+				<br>
+				<b>Vos besoins en formation : </b><br>
+					<textarea name="Besoins" cols="60" rows="4"></textarea>
+				<br>
+				Pour envoyer le formulaire : 
+				<input type="submit" value="Envoyer" onclick="resultat();">
+			</form>
+	</body>
+</html>

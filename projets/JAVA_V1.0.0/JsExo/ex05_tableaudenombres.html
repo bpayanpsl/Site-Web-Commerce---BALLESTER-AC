@@ -1,0 +1,74 @@
+﻿<html>
+	<head>
+		<title>Exo05_Tableau de nombre</title>
+	</head>
+	<body>
+		<!--6-Tableau de nombre-->
+		<div align="center">
+		<h1><b>Tableau de nombres tirés au hasard</b></h1>
+		<br>
+		<hr>
+		<br>
+			
+	<script language="JavaScript">
+		// Création des tableaux T et M de 100 nombres et de 10 nombres
+		var T=new Array(100);
+		var M=new Array(10);
+		//Remplissage du tableau T et du tableau M
+		for (var i=0; i<100; i++) 
+		T[i]=Math.floor(Math.random()*10);
+		
+		for (var i=0; i<10; i++) 
+			M[i]=0;
+		
+		//Affichage du tableau nombres
+		document.writeln("<h2>Nombres</h2>");
+		document.writeln("<table border=\"1\" align=\"center\" cellpadding=\"4\" cellspacing=\"0\">");
+		
+		for (var i=0; i<100; i++) {
+			if (i%10==0) 
+				document.writeln("<tr>");
+				document.writeln("<td>"+T[i]+"</td>");
+			if (i%10==9) 
+				document.writeln("</tr>");
+		}
+		document.writeln("</table>");
+		
+		
+		document.writeln("</td><td align=\"center\">");
+		
+		//Affichage des effectifs 
+		document.writeln("<h2>Effectifs</h2>");
+		document.writeln("<table border=\"1\" align=\"center\" cellpadding=\"4\" cellspacing=\"0\">");
+		// affichage de la premiere ligne de nombres de 1 à 9
+		document.writeln("<tr><td><b>Nombres</b></td>");
+		
+		for (var i=0; i<10; i++){
+			document.writeln("<td>"+i+"</td>");
+		}
+		
+		//Calculs des effectifs
+		for (var k=0; k<10; k++) {
+			for (var i=0; i<100; i++) 
+				if (T[i]==k) 
+					M[k]++;
+		}
+		document.writeln("</tr><tr><td><b>Effectifs</b></td>");
+		
+		for (var i=0; i<10; i++){
+			document.write("<td>"+M[i]+"</td>");
+		}
+		document.writeln("</tr></table>");	
+		
+		
+		
+		</script>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<br><br>
+		<a href="ex05_triduntableau.html">Recommencer</a>
+		</div>
+	</body>
+</html>

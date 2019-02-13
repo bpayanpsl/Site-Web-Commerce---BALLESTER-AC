@@ -1,0 +1,160 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+     <title>Menu déroulant vertical sur clic</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	 <link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+	<body>
+	<script language="JavaScript">
+	function afficheMenu(obj){
+	
+	var idMenu     = obj.id;
+	var idSousMenu = 'sous' + idMenu;
+	var sousMenu   = document.getElementById(idSousMenu);
+	
+	/*****************************************************/
+	/**	si le sous-menu correspondant au menu cliqué    **/
+	/** est caché alors on l'affiche, sinon on le cache **/
+	/*****************************************************/
+	if(sousMenu.style.display == "none"){
+		sousMenu.style.display = "block";
+	}
+	else{
+		sousMenu.style.display = "none";
+	}
+	
+}
+</script>
+	<div align="center">
+	<br>
+	<br>
+	<br>
+		<h1><b>JAVASCRIPT EXERCICES</b></h1>
+		<br>
+		<br>
+		<hr>
+	<div id="Global">
+		<div id="menu">
+			<div id="gauche">
+				<div class="menu" id="menu1" onclick="afficheMenu(this)">
+					<a href="#">Introduction</a>
+				</div>
+				<div id="sousmenu1" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex01_calculette.html">Calculette</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex01_dateheure.html">Date et heure</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex01_conversion.html">Conversions euros/francs</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex01_carré.html">Périmètre et aire du carré</a>
+					</div>
+				</div>
+				<br>
+				<div class="menu" id="menu2" onclick="afficheMenu(this)">
+					<a href="#">Formulaires élémentaires</a>
+				</div>
+				<div id="sousmenu2" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex02_majuscules.html">Mise en majuscules</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex02_prixttc.html">Prix TTC</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex02_calculmoyenne.html">Calcul de moyenne</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex02_calculatriceligne.html">Calculette</a>
+					</div>
+				</div>
+				<br>
+				<div class="menu" id="menu3" onclick="afficheMenu(this)">
+					<a href="#">Structures conditionnelles</a>
+				</div>
+				<div id="sousmenu3" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex03_calculmoyenne.html">Calcul de moyenne</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex03_date.html">Date</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex03_jouranniversaire.html">Jour anniversaire</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex03_tablemulti.html">Tables de multiplications</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex03_lenombresecret.html">Le nombre secret</a>
+					</div>
+				</div>
+				<br>
+				<div class="menu" id="menu4" onclick="afficheMenu(this)">
+					<a href="#">Boucles</a>
+				</div>
+				<div id="sousmenu4" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex04_tablesdemultiplication.html">Tables de multiplication</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex04_tabledepythagore.html">Table de Pythagore</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex04_sommedespremiersentiers.html">Somme des premiers entiers</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex04_jeudu21.html">Jeu du 21</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex04_jeudu21(statistiques).html">Jeu du 21 (statistiques)</a>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div id="droite">
+				<div class="menu" id="menu5" onclick="afficheMenu(this)">
+					<a href="#">Tableaux</a>
+				</div>
+				<div id="sousmenu5" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex05_ecrireladate.html">Ecrire la date</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex05_calculsstatistiques.html">Moyenne, minimum, maximum</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex05_triduntableau.html">Tri</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex05_loto.html">Loto</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex05_tableaudenombres.html">Tableau de nombres</a>
+					</div>
+				</div>
+				<br>
+				<div class="menu" id="menu6" onclick="afficheMenu(this)">
+					<a href="#">Formulaires</a>
+				</div>
+				<div id="sousmenu6" style="display:none">
+					<div class="sousmenu">
+						<a href="./JsExo/ex06_textesatrous.html">Texte à trous</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex06_choisirsonmenu.html">Choisir son menu</a>
+					</div>
+					<div class="sousmenu">
+						<a href="./JsExo/ex06_sondage.html">Sondage</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html> 

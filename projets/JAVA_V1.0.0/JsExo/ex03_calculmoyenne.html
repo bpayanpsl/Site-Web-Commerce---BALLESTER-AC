@@ -1,0 +1,40 @@
+<html>
+<head><title>Exo03_Calcul de moyenne</title></head>
+<body> 
+<!--1-Calcul de moyenne-->
+<div align="center">
+<h1><b>Calcul de moyenne</b></h1><br>
+<br>
+<hr>
+<script language="Javascript">
+		function moyenne()
+		{
+			var ds1=eval(document.formu.ds1.value);
+			var ds2=eval(document.formu.ds2.value);
+			var ds3=eval(document.formu.ds3.value);
+			document.formu.moy.value=Math.round(((ds1+ds2+ds3)/3)*10)/10;
+			var res=eval(document.formu.moy.value);
+			var note;
+			if(res>=0 && res<=7)
+				note=("C'est mauvais !");
+			if(res>=7 && res<=12)
+				note=("C'est moyen !");
+			if(res>=12 && res<=16)
+				note=("C'est bien !");
+			if(res>=16 && res<=20)
+				note=("Tres bien !");
+			document.formu.note.value=(note);
+		}
+	</script>
+	
+	<form name="formu">
+		<br>
+		Note du DS1: <input type="text" name="ds1" /><br/>
+		Note du DS2: <input type="text" name="ds2" /><br/>
+		Note du DS3: <input type="text" name="ds3" /><br/>
+		<input type="button" name="envoi" onclick="moyenne()" value="Calculer"/><br>
+		Moyenne obtenue: <input type="text" name="moy" /><br/>
+		<input type="text" name="note"/><br/>
+	</form>	      			
+</body>
+</html>

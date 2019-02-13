@@ -1,0 +1,33 @@
+<html>
+<head><title>Exo02_Date</title></head>
+<body>
+<!--2-Date-->
+<div align="center">
+<h1><b>Date</b></h1><br>
+<br>
+<hr>
+<div align="center">
+	<script language="Javascript">
+		var maintenant=new Date();
+		var jour=maintenant.getDate();
+		var mois=maintenant.getMonth()+1;
+		var an=maintenant.getFullYear();
+		var day=maintenant.getDay();
+		switch (day)
+		{
+		case 1: day="Lundi";break;
+		case 2: day="Mardi";break;
+		case 3: day="Mercredi";break;
+		case 4: day="Jeudi";break;
+		case 5: day="Vendredi";break;
+		case 6: day="Samedi";break;
+		case 7: day="Dimanche";break;
+		}
+		
+		
+		document.write("<br><br>","Nous sommes le ",day," ",jour,"/",mois,"/",an,".");
+
+	</script>
+</div>
+</body>
+</html>

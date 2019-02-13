@@ -1,0 +1,27 @@
+<html>
+<head><title>Exo02_Prix TTC</title></head>
+<body> 
+<!--2-Prix TTC-->
+<div align="center">
+<h1><b>Prix TTC</b></h1><br>
+<br>
+<hr>
+<script language="Javascript">
+		function prix()
+		{
+		var res=eval(document.formu.ht.value);
+		document.formu.ttc.value=document.formu.ht.value*(0.186+1);
+		}
+		
+	</script>
+	
+	<form name="formu">
+		<br>
+		Prix hors taxe: <input type="text" name="ht" /><br/>
+		<input type="button" name="envoi" onclick="prix()" value="Calculer"/><br>
+		Prix TTC: <input type="text" name="ttc"/><br/>
+
+	</form>
+</body>
+</html>
+	

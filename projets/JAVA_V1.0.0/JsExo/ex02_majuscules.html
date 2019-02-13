@@ -1,0 +1,22 @@
+<html>
+<head><title>Exo02_Mise en Majuscules</title></head>
+<body>
+<!--1-Mise en Majuscules-->
+<div align="center">
+<h1><b>Mise en majuscules</b></h1><br>
+<br>
+<hr>
+<br>Entrez un mot et appuyez sur le bouton "=>"<br>
+	<script language="Javascript">
+		function majuscule(){
+			document.formu.maj.value=document.formu.min.value.toUpperCase();
+			}
+	</script>
+		
+	<form name="formu">
+		<input type="text" name="min">
+		<input type="button" onclick="majuscule()" value="=>">
+		<input type="text" name="maj">
+</div>
+</body>
+</html>

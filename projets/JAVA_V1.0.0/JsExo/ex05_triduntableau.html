@@ -1,0 +1,48 @@
+﻿<html>
+	<head>
+		<title>Exo05_Tri d'un tableau</title>
+	</head>
+	<body>
+		<!--3-Tri d'un tableau-->
+		<div align="center">
+		<h1><b>Tri d'un tableau</b></h1>
+		<br>
+		<hr>
+		<br>
+		
+			
+	<script language="JavaScript">
+			
+		var T=new Array(10);
+		document.write("<table border=\"1\" align=\"center\" cellpadding=\"4\" cellspacing=\"0\">"+"<br>"+"Création d'un tableau de 10 nombres"+"<br><br>"+"<tr>");
+		for (i=0; i<10; i++){
+		T[i]=Math.floor(Math.random()*100); 
+		document.writeln("<td>"+T[i]+"</td>");}
+		document.write("</tr></table>");
+		
+		document.write("<br>"+"Tri lexicographique du tableau"+"<br><br>");
+		
+		document.write("<td>");
+		
+		function tri(){
+		document.writeln("<table border=\"1\" align=\"center\" cellpadding=\"4\" cellspacing=\"0\">"+"<tr>");
+		for (var i=0; i<10; i++) 
+		document.write("<td>"+T[i]+"</td>");
+		document.writeln("</tr></table>");}
+		T=T.sort();
+		tri(T);
+		
+		document.write("<br>"+"Tri numérique du tableau"+"<br><br>");
+		
+		function compare(x, y) {
+			return x - y;
+		}
+		T.sort(compare);
+		tri(T);
+			
+		</script>
+		<br><hr><br><br>
+		<a href="ex05_triduntableau.html">Recommencer</a>
+		</div>
+	</body>
+</html>

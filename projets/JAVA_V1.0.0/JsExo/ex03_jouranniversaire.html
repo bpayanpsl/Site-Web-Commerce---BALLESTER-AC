@@ -1,0 +1,48 @@
+﻿<html>
+<head><title>Exo03_Jour Anniversaire</title></head>
+<body>
+<!--3-Jour anniversaire-->
+<div align="center">
+<h1><b>Jour anniversaire</b></h1><br>
+<br>
+<hr>
+<br><b><h3>Quel jour êtes-vous né ?</h3></b>
+<br>
+<br>Un dimanche, un lundi, un mardi, un mercredi, un jeudi, un vendredi ou un samedi ?
+<br>
+<br>Il vous suffit de remplir le formulaire suivant pour le savoir.
+<script language="Javascript">
+	function anniversaire()
+	{
+		var jour=eval(document.formu.jour.value);
+		var mois=eval(document.formu.mois.value);
+		var an=eval(document.formu.an.value);
+		var anniv=new Date(an,mois-1,jour);
+		var day=anniv.getDay();
+		switch(day)
+		{
+		case 1: day="Lundi";break;
+		case 2: day="Mardi";break;
+		case 3: day="Mercredi";break;
+		case 4: day="Jeudi";break;
+		case 5: day="Vendredi";break;
+		case 6: day="Samedi";break;
+		case 7: day="Dimanche";break;
+		}
+
+
+		document.formu.oui.value=("Le "+jour+"/"+mois+"/"+an+" est un "+day+"!");
+	}
+
+	</script>
+	<form name="formu">
+		<br>
+		Jour: <input type="text" name="jour" /><br/>
+		Mois: <input type="text" name="mois" /><br/>
+		Année: <input type="text" name="an" /><br/>
+		<input type="button" name="envoi" onclick="anniversaire()" value="Calculer"/><br>
+		<input type="text" name="oui" size="50"/><br/>
+	</form>	
+</div>
+</body>
+</html>

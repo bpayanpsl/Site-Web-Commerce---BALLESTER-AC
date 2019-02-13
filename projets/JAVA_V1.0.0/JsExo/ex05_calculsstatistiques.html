@@ -1,0 +1,66 @@
+﻿<html>
+	<head>
+		<title>Exo05_Calculs statistiques</title>
+	</head>
+	<body>
+		<!--2-Calculs statistiques-->
+		<div align="center">
+		<h1><b>Calculs statistiques</b></h1>
+		<br>
+		<hr>
+		<br>
+		
+	<script language="JavaScript">
+		function calcul(){
+			var S=document.formu.nombres.value.split(",");
+			var somme=0;
+			var maxi=S[0];
+			var mini=S[0];
+			var N=S.length;
+			//var N=eval(N);
+
+			// moyenne
+			for (var i=0; i<N; i++){
+			somme+=eval(S[i]);
+			}
+			moyenne=somme/N;
+			moyenne=eval(moyenne); 	
+			//var moy=eval(moy);
+			document.formu.moy.value=moyenne;
+			
+			// minimum
+			for (var i=1; i<N; i++) {
+			if (S[i]<mini){ 
+			mini=S[i];
+					}
+			var min=eval(mini);
+			document.formu.min.value=min;
+			}
+			
+		
+			// maximum 
+			for (var i=0; i<N; i++) {
+				if (S[i]>maxi)
+				maxi=S[i];
+				
+			}
+				var max=eval(maxi);
+				document.formu.max.value=max;
+			
+}
+				 
+		</script>	
+			<form name="formu">
+				Entrer une suite de nombres séparés par des virgules : <input type="text" name="nombres"/>
+				<br>
+				<input type="button" value="Calculer" onclick="calcul()"/>
+				<br>
+				La moyenne est <input type="text" name="moy"/>
+				<br>Le minimum est <input type="text" name="min"/>
+				<br>La maximum est <input type="text" name="max"/>
+			</form>
+			<br>
+			<hr>
+		</div>
+	</body>
+</html>

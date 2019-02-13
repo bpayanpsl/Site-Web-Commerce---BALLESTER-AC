@@ -1,0 +1,41 @@
+﻿<html>
+<head><title>Exo03_Tables de multiplication</title></head>
+<body>
+<!--4-Tables de multiplication-->
+<div align="center">
+<h1><b>Tables de multiplication</b></h1><br>
+<br>
+<hr>
+<br>
+<script language="Javascript">
+		var n1=Math.floor(Math.random()*8)+2;
+		var n2=Math.floor(Math.random()*8)+2;
+
+		function verif() 
+		{
+			var rep=document.formu.reponse.value;
+			if (isNaN(rep)) 
+			{
+			alert("Entrer un nombre pour répondre !");
+			}
+				else 
+				{
+					if (eval(rep)==n1*n2) {
+					alert("Bonne réponse. Bravo !\n"+n1+"x"+n2+"="+rep);
+					}
+					else {
+					alert("Réponse inexacte !");
+					}
+				}
+		}
+		document.write("<B><FONT SIZE='+1'>",n1," x ",n2," = </FONT></B>");
+
+	</script>
+	<form name="formu">
+		<br>
+		<input name="reponse" type="text" size="4">
+		<input type="button" value="Vérifier" onclick="verif();">
+	</form>	
+</div>
+</body>
+</html>
